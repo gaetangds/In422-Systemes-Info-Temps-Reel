@@ -16,10 +16,10 @@ void compare2value(int a, int b) {
 }
 
 void printforLoopValue(int start, int end) {
-	for (int i = a; i <= end; i++) { 
+	for (int i = start; i <= end; i++) { 
 		printf("%d ", i);
 	}
-	printf('\n');
+	printf("\n");
 }
 
 void printwhileLoopValue(int start, int end) {
@@ -28,7 +28,10 @@ void printwhileLoopValue(int start, int end) {
 		printf("%d ", cpt);
 		cpt++;
 	}
-	printf('\n');
+	printf("\n");
 }
 
+void assignValue(int* a, int b) {
+	*a = b;
+}
 

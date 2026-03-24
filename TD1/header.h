@@ -5,5 +5,6 @@ void printHello();
 void compare2value();
 void printforLoopValue();
 void printwhileLoopValue();
+void assignValue();
 
 #endif
