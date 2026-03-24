@@ -35,3 +35,23 @@ void assignValue(int* a, int b) {
 	*a = b;
 }
 
+void sum(int a, int b) { 
+	printf("%d \n", a + b);
+}
+
+void found(int *arr, int size, int search){
+	int found = 0;
+	for (int i = 0; i < size; i++) {
+		if (arr[i] == search) {
+			printf("Value %d found at index %d \n", search, i);
+			found = 1;
+			break;
+		}
+	}
+	
+	if (!found) {
+		printf("Value not found \n");
+	}
+
+
+}
