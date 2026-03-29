@@ -52,6 +52,55 @@ void found(int *arr, int size, int search){
 	if (!found) {
 		printf("Value not found \n");
 	}
+}
 
 
+void binary_search(int *arr, int size, int search) {
+    int start = 0;
+    int end = size - 1;
+
+    while (start <= end) {
+        int mid = (start + end) / 2;
+
+        if (arr[mid] == search) {
+            printf("Number : %d, found at index %d\n", search, mid);
+            return;
+        } else if (arr[mid] < search) {
+            start = mid + 1;
+        } else {
+            end = mid - 1;
+        }
+    }
+
+    printf("Element not found\n");
+}
+
+void ordererList(int *arr, int size, int type) {
+	for (int i = 0; i < size - 1; i++) {
+        int index = i;
+
+        for (int j = i + 1; j < size; j++) {
+            if (type) { 
+                if (arr[j] < arr[index]) {
+                    index = j;
+                }
+            } else {
+                if (arr[j] > arr[index]) {
+                    index = j;
+                }
+            }
+        }
+
+        int temp = arr[i];
+        arr[i] = arr[index];
+        arr[index] = temp;
+    }
+}
+
+
+void printArray(int *arr, int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
 }

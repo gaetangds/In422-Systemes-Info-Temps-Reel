@@ -8,5 +8,8 @@ void printwhileLoopValue();
 void assignValue();
 void sum();
 void found();
+void binary_search();
+void ordererList();
+void printArray();
 
 #endif
